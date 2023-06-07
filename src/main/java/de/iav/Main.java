@@ -4,16 +4,16 @@ package de.iav;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ShapeFactory shapeFactory = new ShapeFactory();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        Shape circle = shapeFactory.createShape("Circle");
+        circle.draw();
+        System.out.println(circle.toString());
+        Shape rectangle = shapeFactory.createShape("Rectangle");
+        rectangle.draw();
+        System.out.println(rectangle.toString());
+        Shape square = shapeFactory.createShape("Square");
+        square.draw();
+        System.out.println(square.toString());
     }
 }
